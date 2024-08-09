@@ -24,11 +24,17 @@ export default function () {
 }
 
 
+---
+
 ## Test Results
-Framework       | Requests per Second | Average Response Time (ms) | 95th Percentile Response Time (ms)
-----------------|----------------------|-----------------------------|---------------------------------
-C#              | 129,739.88           | 0.73                        | 2.01
-Fastify         | 31,970.55            | 3.09                        | 4.50
-Fastify Worker  | 126,510.51           | 0.74                        | 1.50
-Golang          | 141,906.00           | 0.66                        | 1.98
-Node.js Express | 8,989.77             | 11.08                       | 14.00
+
+The performance test results are summarized in the table below:
+
+| Framework       | Requests per Second | Average Response Time (ms) | 95th Percentile Response Time (ms) |
+|-----------------|----------------------|-----------------------------|------------------------------------|
+| C#              | 129,739.88           | 0.73                        | 2.01                               |
+| Fastify         | 31,970.55            | 3.09                        | 4.50                               |
+| Fastify Worker  | 126,510.51           | 0.74                        | 1.50                               |
+| Golang          | 141,906.00           | 0.66                        | 1.98                               |
+| Node.js Express | 8,989.77             | 11.08                       | 14.00                              |
+
