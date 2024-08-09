@@ -1,0 +1,39 @@
+k6 run k6-test.js
+
+		  /\      |‾‾| /‾‾/   /‾‾/
+	 /\  /  \     |  |/  /   /  /
+	/  \/    \    |     (   /   ‾‾\
+	/          \   |  |\  \ |  (‾)  |
+	/ __________ \  |__| \__\ \_____/ .io
+
+	 execution: local
+		script: k6-test.js
+		output: -
+
+	 scenarios: (100.00%) 1 scenario, 100 max VUs, 1m0s max duration (incl. graceful stop):
+			  * default: 100 looping VUs for 30s (gracefulStop: 30s)
+
+
+	 ✓ status is 200
+
+	 checks.........................: 100.00% ✓ 3892355       ✗ 0
+	 data_received..................: 642 MB  21 MB/s
+	 data_sent......................: 311 MB  10 MB/s
+	 http_req_blocked...............: avg=992ns    min=0s med=0s      max=52.33ms p(90)=0s     p(95)=0s
+	 http_req_connecting............: avg=119ns    min=0s med=0s      max=14.73ms p(90)=0s     p(95)=0s
+	 http_req_duration..............: avg=726.92µs min=0s med=559.3µs max=54.89ms p(90)=1.64ms p(95)=2.01ms
+	   { expected_response:true }...: avg=726.92µs min=0s med=559.3µs max=54.89ms p(90)=1.64ms p(95)=2.01ms
+	 http_req_failed................: 0.00%   ✓ 0             ✗ 3892355
+	 http_req_receiving.............: avg=21.72µs  min=0s med=0s      max=52.33ms p(90)=0s     p(95)=0s
+	 http_req_sending...............: avg=5.86µs   min=0s med=0s      max=52.6ms  p(90)=0s     p(95)=0s
+	 http_req_tls_handshaking.......: avg=0s       min=0s med=0s      max=0s      p(90)=0s     p(95)=0s
+	 http_req_waiting...............: avg=699.33µs min=0s med=549.4µs max=49.2ms  p(90)=1.61ms p(95)=1.96ms
+	 http_reqs......................: 3892355 129739.882794/s
+	 iteration_duration.............: avg=764.09µs min=0s med=572.1µs max=55.92ms p(90)=1.68ms p(95)=2.07ms
+	 iterations.....................: 3892355 129739.882794/s
+	 vus............................: 100     min=100         max=100
+	 vus_max........................: 100     min=100         max=100
+
+
+running (0m30.0s), 000/100 VUs, 3892355 complete and 0 interrupted iterations
+default ✓ [======================================] 100 VUs  30s

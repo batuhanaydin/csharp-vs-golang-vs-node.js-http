@@ -1,0 +1,39 @@
+k6 run k6-test.js
+
+          /\      |‾‾| /‾‾/   /‾‾/
+     /\  /  \     |  |/  /   /  /
+    /  \/    \    |     (   /   ‾‾\
+   /          \   |  |\  \ |  (‾)  |
+  / __________ \  |__| \__\ \_____/ .io
+
+     execution: local
+        script: k6-test.js
+        output: -
+
+     scenarios: (100.00%) 1 scenario, 100 max VUs, 1m0s max duration (incl. graceful stop):
+              * default: 100 looping VUs for 30s (gracefulStop: 30s)
+
+
+     ✓ status is 200
+
+     checks.........................: 100.00% ✓ 3795489       ✗ 0
+     data_received..................: 676 MB  23 MB/s
+     data_sent......................: 304 MB  10 MB/s
+     http_req_blocked...............: avg=1.19µs   min=0s med=0s      max=22.13ms p(90)=0s     p(95)=0s
+     http_req_connecting............: avg=28ns     min=0s med=0s      max=3.99ms  p(90)=0s     p(95)=0s
+     http_req_duration..............: avg=741.72µs min=0s med=999.6µs max=48.95ms p(90)=1.3ms  p(95)=1.5ms
+       { expected_response:true }...: avg=741.72µs min=0s med=999.6µs max=48.95ms p(90)=1.3ms  p(95)=1.5ms
+     http_req_failed................: 0.00%   ✓ 0             ✗ 3795489
+     http_req_receiving.............: avg=21.24µs  min=0s med=0s      max=42.84ms p(90)=0s     p(95)=0s
+     http_req_sending...............: avg=6.44µs   min=0s med=0s      max=33.6ms  p(90)=0s     p(95)=0s
+     http_req_tls_handshaking.......: avg=0s       min=0s med=0s      max=0s      p(90)=0s     p(95)=0s
+     http_req_waiting...............: avg=714.03µs min=0s med=999.5µs max=47.5ms  p(90)=1.17ms p(95)=1.5ms
+     http_reqs......................: 3795489 126510.508771/s
+     iteration_duration.............: avg=783.33µs min=0s med=999.8µs max=48.95ms p(90)=1.5ms  p(95)=1.5ms
+     iterations.....................: 3795489 126510.508771/s
+     vus............................: 100     min=100         max=100
+     vus_max........................: 100     min=100         max=100
+
+
+running (0m30.0s), 000/100 VUs, 3795489 complete and 0 interrupted iterations
+default ✓ [======================================] 100 VUs  30s
